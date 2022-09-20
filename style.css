@@ -5,7 +5,10 @@
     font-weight: normal;
     font-style: normal;
 }
-
+* {
+    margin: 0px;
+    padding: 0px;
+}
 body{
     background-color: #58e07e;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,22 +17,33 @@ body{
      /*Cabeçalho*/
 header {
     background-image: linear-gradient(to bottom, #58e07e, #44ad62, #266137, #43614b);
-    color: white;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.671);
     text-align: center;
-    margin-left: -8px;
-    margin-right: -8px;
+    min-height: 150px;
+    padding-top: 40px;
 
 
 }
 
 header > h1 {
-    font-size: 40px;
-    margin: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    
+
+
 }
 
 header > p {
-    font-size: 16px;
+    color: white;
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+
+
 }
      /*Menu*/
 nav {
