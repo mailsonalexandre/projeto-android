@@ -1,9 +1,13 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @font-face {
     font-family: 'idroid';
     src: url('fontes/idroid.otf' )format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+:root {
+    --fonte-destaque: 'Bebas Neue', cursive;
 }
 * {
     margin: 0px;
@@ -17,7 +21,7 @@ body{
 
      /*Cabeçalho*/
 header {
-    background-image: linear-gradient(to bottom, #58e07e, #44ad62, #266137, #43614b);
+    background-image: linear-gradient(to bottom, #44ad62, #266137, #43614b);
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
@@ -27,8 +31,9 @@ header {
 
 header > h1 {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-destaque);
     font-size: 3em;
+    font-weight: normal;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
     
@@ -37,66 +42,70 @@ header > h1 {
 }
 
 header > p {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
     color: white;
     font-size: 1.2em;
     max-width: 600px;
     padding-right: 10px;
     padding-left: 10px;
     margin: auto;
+    padding-bottom: 50px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
 
 }
      /*Menu*/
 nav {
-    color: white;
+    font-family: var(--fonte-destaque);
+    background-color: #43614b;
+    padding: 10px;
+    box-shadow: 0px 7px rgb(0, 0, 0 / 19%);
+}
+
+nav > a {
+    color: #9cf8b6;
     text-decoration: none;
     text-align: left;
     text-indent: 25px;
     padding: 10px;
-}
-
-button {
-    background-image: linear-gradient(to bottom, #266137, #43614b);
-    border: none;
+    border-radius: 5px;
     padding: 5px;
 }
-button > a {
-    color: white;
-    text-decoration: none;
- }
-
- button:hover > a{
+nav > a:hover{
     background-color: #58e07e;
     color: black;
     font-weight: bold;
-    transition: 1s;
-    padding: 2px;
-    border-radius: 2px;
+    transition: 1.5s;
  }
 
      /*Pricinpal*/
 
  main {
     background-color: white;
-    border-radius: 5px;
-    padding: 10px;
     min-width: 300px;
     max-width: 1000px;
     margin: auto;
-
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0 / 42%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
  }
 
  main  h1 {
-    font-family: 'idroid', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: left;
     color: #43614b;
+    font-family: 'idroid', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 1,8em;
+    
  }
 
  main h2 {
     font-family: 'idroid', Arial, Helvetica, sans-serif;
-    background-image:linear-gradient(to right, #44ad626b, white);
+    background-image:linear-gradient(to right, #44ad626b, rgb(0 0 0 / 0%));
     color: #266137;
+    font-size: 1.3em;
+    font-weight: normal;
+    text-indent: 8px;
  }
 main p {
     margin: 15px 0px;
@@ -120,19 +129,18 @@ main img.pequena {
         /*Conteúdo Extra*/
 aside {
     background-color:#58e07eb9;
+    padding: 10px;
     border-radius: 10px;
-    text-align: justify;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-bottom: 5px;
+    box-shadow: 3px 3px 8px rgb(0, 0, 0.281);
 
 }
 
 aside > h3 {
     background-color: #266137;
     color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
     border-radius: 10px 10px 0px 0px;
-    padding-bottom: 2px;
 }
 
         /*Listas*/
@@ -149,22 +157,29 @@ footer {
     background-color: #43614b;
     color: white;
     text-align: center;
-    margin-top:8px;
+    font-size: 0.8em;
+    padding: 5px;
 }
-
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #9cf8b6;
+    font-size: 1em;
+    text-decoration: underline;
+}
 
         /*Video*/
 
 div.video {
-    position: relative;
     background-color: #43614b;
-    height: 0px;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: 15px;
-    padding-bottom: 59%;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
 }
-
 div.video > iframe {
     position: absolute;
     top: 5%;
